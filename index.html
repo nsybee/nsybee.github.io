@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nsidibe Bassey's Portfolio</title>
+  <style>
+    /* Resetting some default styles */
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+  
+    /* Setting a background color and text color */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c6cfe1;
+      color: #333;
+    }
+  
+    /* Styling the navigation menu */
+    nav {
+      background-color: #222;
+      color: blueviolet;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    nav ul {
+      list-style: none;
+    }
+  
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+  
+    nav ul li a {
+      color: blue;
+      text-decoration: none;
+    }
+  
+    /* Styling the sections */
+    section {
+      padding: 2rem;
+      background-color: #f8f6f8;
+      margin: 2rem 0;
+      box-shadow: 0 2px 4px rgba(162, 212, 227, 0.1);
+    }
+  
+    /* Styling headings and paragraphs */
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+      color: rgb(122, 177, 200);
+      background-color: #f0f0f0; /* Added background color */
+      padding: 0.5rem; /* Added padding for spacing */
+      display: inline-block; /* Ensures that background color only affects text */
+    }
+  
+    /* Adding responsive styles for smaller screens */
+    @media screen and (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <section id="home">
+    <h1>Welcome to Bassey, Nsidibe Portfolio</h1>
+    <p>Here, I showcase the list of projects I embark on and skills that I have acquired.</p>
+  </section>
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3> Word frequency Counter</h3>
+      <p>The Word Frequency Counter and Analysis Tool is a Python application that allows users to analyze text input, providing insights into word frequencies, sentiment analysis, named entity recognition, and misspelled words detection. This tool is designed to help users understand the content and sentiment of textual data.</p>
+    </div>
+    
+    <!-- Add more projects here -->
+  </section>
+  
+  <section id="about">
+    <h2>About Me</h2>
+        
+        <p> I'm Bassey, Nsidibe, a passionate software engineer with a background in system analysis and database administration. My journey in the tech world has been a blend of curiousity, creativity, problem-solving, and continuous learning.</p>
+            
+        <p>With experience as a system analyst, I've honed my skills in understanding complex systems, breaking them down, and optimizing their functionality. My previous role as a database administrator equipped me with a keen eye for data integrity and efficient management of large datasets.</p>
+
+        <p> Driven by a curiosity for innovation, I've transitioned into software engineering to craft elegant solutions that blend functionality and user experience. 
+            My projects span from creating web applications to solving algorithmic puzzles, showcasing my versatile coding skills.</p>
+    
+        <p> Currently, I am a second year master's degree student at Vrije University Amsterdam. I am available for intership postions in areas that my skills will be utilize. </p>
+            
+        <p>When I'm not immersed in coding, you'll find me exploring new technologies, collaborating with fellow developers, and occasionally enjoying a good movies. I'm excited about the possibilities that technology holds and am eager to contribute to impactful projects that make a difference.</p>
+          
+  </section>
+  
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: onoyom247@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/nsidibe-bassey-753830175" target="_blank">My LinkedIn Profile</a></p>
+  </section>
+  
+  <script>
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      });
+    });
+  </script>
+</body>
+</html>
